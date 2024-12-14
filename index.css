@@ -1,4 +1,43 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
 }
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75em;
+    padding: 1.6875em 1.1875em;
+}
+
+#scheme {
+    padding: 0.5625em 0.8125em;
+    font-weight: 400px;
+    border-radius: 0.375em;
+    color: #111827;
+}
+
+#submit {
+    padding: 11px 13px;
+    border-radius: 4px;
+    color: #374151;
+}
+
+#color {
+    border-color: #d1d5db;
+}
+#color, #submit, #scheme {
+    font-family: "Inter", sans-serif;
+    background-color: #FFFFFF;
+    border: 1px solid #d1d5db;
+    height: 42px;
+}
+
