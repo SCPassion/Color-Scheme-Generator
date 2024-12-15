@@ -6,8 +6,10 @@ const colorHex = [...document.getElementsByClassName('color-hex')]
 const baseURL = "https://www.thecolorapi.com"
 const endpoint = "/scheme"
 
+// Set default color value for the html color input selector
 color.value = "#F55A5A"
 
+// Listen to form submit event
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(form)
@@ -21,3 +23,18 @@ form.addEventListener('submit', (e) => {
             })
         })
 });
+
+// Listen to copy color hex event
+document.addEventListener('click', (e) => {
+    if(e.target.classList.contains('color-bar')) {
+        // Get color hex content
+        const colorHexContent = document.querySelector(`[data-id="${e.target.id}"]`).textContent
+
+        // Copy to clipboard
+        navigator.clipboard.writeText(colorHexContent).then(()=>{
+            alert('Color copied to clipboard')
+        }).catch((err)=> {
+            console.error(err)
+        })
+    }
+})

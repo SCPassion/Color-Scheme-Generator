@@ -79,6 +79,7 @@ html, body {
 /* color-bar basic config */
 .color-bar {
     height: 300px;
+    cursor: pointer;
 }
 
 /* hex display for color-bar */
