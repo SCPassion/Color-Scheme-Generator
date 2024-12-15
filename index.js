@@ -1,6 +1,8 @@
 const form = document.getElementById('form')
 const color = document.getElementById('color')
 const scheme = document.getElementById('scheme')
+const submitBtn = document.getElementById('submit')
+
 const colorHex = [...document.getElementsByClassName('color-hex')]
 
 const baseURL = "https://www.thecolorapi.com"
