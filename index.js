@@ -11,7 +11,6 @@ color.value = "#F55A5A"
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(form)
-    // const data = {hex: formData.get('color'), scheme:formData.get('scheme') }
     const url = `${baseURL}${endpoint}?hex=${formData.get('color').slice(1)}&count=5&mode=${formData.get('scheme')}`
     fetch(url)
         .then(res=>res.json())
@@ -20,10 +19,5 @@ form.addEventListener('submit', (e) => {
                 colorHex[index].textContent = color.hex.value
                 document.getElementById(colorHex[index].dataset.id).style.backgroundColor = color.hex.value
             })
-            // console.log(data.colors)
         })
 });
-
-// fetch("https://www.thecolorapi.com/scheme?hex=0047AB&count=5&mode=analogic")
-//     .then(res=>res.json())
-//     .then(data=>console.log(data.colors))
